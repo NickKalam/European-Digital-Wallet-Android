@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="24dp">
+
+    <EditText
+        android:id="@+id/email_or_phone_input"
+        android:autofillHints=""
+        android:hint="@string/email_or_phone_hint"
+        android:inputType="textEmailAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <EditText
+            android:id="@+id/pinInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="PIN"
+            android:inputType="numberPassword"
+            android:importantForAutofill="no"
+            android:imeOptions="actionDone"
+            tools:ignore="HardcodedText" />
+
+        <ImageButton
+            android:id="@+id/togglePinVisibility"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="visibility toggle"
+            android:src="@drawable/ic_visibility_off"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/login_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:cornerRadius="8dp"
+        android:text="@string/login" />
+
+    <Button
+        android:id="@+id/change_pin_button"
+        android:text="@string/change_pin_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:cornerRadius="8dp"/>
+
+    <Button
+        android:id="@+id/register_button"
+        android:text="@string/register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:cornerRadius="8dp"/>
+
+</LinearLayout>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.digitalwallet.fragment.LoginFragment"
+        android:label="Login" >
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+
+        <action
+            android:id="@+id/action_loginFragment_to_changePinFragment"
+            app:destination="@id/changePinFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_documentsFragment"
+            app:destination="@id/documentsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/changePinFragment"
+        android:name="com.digitalwallet.fragment.ChangePinFragment"
+        android:label="@string/change_pin_title"
+        tools:layout="@layout/fragment_change_pin" >
+        <action
+            android:id="@+id/action_changePinFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.digitalwallet.fragment.RegisterFragment"
+        android:label="Register" >
+        <action
+            android:id="@+id/action_registerFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/documentsFragment"
+        android:name="com.digitalwallet.fragment.DocumentsFragment"
+        android:label="@string/documents">
+        <action
+            android:id="@+id/action_documentsFragment_to_documentDetailFragment"
+            app:destination="@id/documentDetailFragment" />
+        <action
+            android:id="@+id/action_documentsFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_documentsFragment_to_addDocumentFragment"
+            app:destination="@id/addDocumentFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/addDocumentFragment"
+        android:name="com.digitalwallet.fragment.AddDocumentFragment"
+        android:label="Add Document">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/documentDetailFragment"
+        android:name="com.digitalwallet.fragment.DocumentDetailFragment"
+        android:label="Document Detail" >
+        <argument
+            android:name="documentId"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_documentDetailFragment_to_documentsFragment"
+            app:destination="@id/documentsFragment" />
+
+    </fragment>
+
+</navigation>

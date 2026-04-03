@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Digital Wallet</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="logout">Logout</string>
+    <string name="continue_button">Continue</string>
+    <string name="mock_verification_channel_name">Verification</string>
+    <string name="mock_verification_channel_desc">Mock SMS/Email verification codes</string>
+    <string name="sms_verification_title">SMS verification</string>
+    <string name="your_code_is">Your verification code is %1$s</string>
+    <string name="verify_code">Verify code</string>
+    <string name="enter_code">Enter code</string>
+    <string name="code_sent">Verification code sent</string>
+    <string name="email_not_verified">Email not verified yet.</string>
+    <string name="verification_email_sent">Verification email sent. Check your inbox.</string>
+    <string name="firebase_wrong_password">Account exists but the placeholder password didn’t match.</string>
+    <string name="firebase_signin_failed">Couldn’t sign in to Firebase for email verification.</string><string name="firebase_account_missing">This email isn’t linked to Firebase. Please re-register to enable email verification.</string>
+    <string name="name">Name</string>
+    <string name="phone">Phone (optional)</string>
+    <string name="back_to_login">Back to login</string>
+    <string name="add_document">Add document</string>
+    <string name="documents">Documents</string>
+    <string name="show_qr">Show QR</string>
+    <string name="qr_image">QR image</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+    <string name="issuer">Issuer: %1$s</string>
+    <string name="type">Type: %1$s</string>
+    <string name="status">Status: %1$s</string>
+    <string name="issue_date">Issue date: %1$s</string>
+    <string name="expiry_date">Expiry date: %1$s</string>
+    <string name="date_of_birth">Date of birth: %1$s</string>
+    <string name="event_date">Event date: %1$s</string>
+    <string name="full_name">Full name: %1$s</string>
+    <string name="nationality">Nationality: %1$s</string>
+    <string name="id_number">ID number: %1$s</string>
+    <string name="license_number">License number: %1$s</string>
+    <string name="categories">Categories: %1$s</string>
+    <string name="event">Event: %1$s</string>
+    <string name="seat">Seat: %1$s</string>
+    <string name="venue">Venue: %1$s</string>
+    <string name="driver_age_error">A driver must be at least 18 years old</string>
+    <string name="invalid_dob_error">Invalid date of birth</string>
+    <string name="event_date_error">Date of event must be after today</string>
+    <string name="id_photo_desc">Owner ID photo</string>
+    <string name="dl_photo_desc">Driver’s license owner photo</string>
+    <string name="take_photo">Take photo</string>
+    <string name="photo_capture_failed">Photo capture failed</string>
+    <string name="add">Add</string>
+    <string name="cancel">Cancel</string>
+    <string name="pick_qr_image_button">Pick QR Image</string>
+    <string name="date_error">Issue date must be before expiry date</string>
+    <string name="user_no_login_error">User not logged in</string>
+    <string name="user_exists">User already exists</string>
+    <string name="empty_fields_error">All fields required</string>
+    <string name="invalid_email_or_phone">Invalid email address or phone number</string>
+    <string name="invalid_email">Invalid email address</string>
+    <string name="invalid_phone">Invalid phone number</string>
+    <string name="invalid_credentials">Invalid credentials</string>
+    <string name="account_locked">Account locked. Try again later.</string>
+    <string name="invalid_categories">Invalid categories</string>
+    <string name="registration_success">Registration successful! Please login.</string>
+    <string name="qr_render_error">Could not render QR image.</string>
+    <string name="pin_required">PIN required</string>
+    <string name="invalid_pin_error">Invalid PIN</string>
+    <string name="select_qr_source">Select QR source</string>
+    <string name="camera_permission_required">Camera permission is required to capture QR codes.</string>
+    <string name="qr_loaded">QR loaded</string>
+    <string name="no_qr_found">No QR found</string>
+    <string name="no_qr_selected">No QR selected</string>
+    <string name="decode_error">Decode error</string>
+    <string name="select_owner_photo_source">Select owner photo source</string>
+    <string name="from_files">From files</string>
+    <string name="use_camera">Use camera</string>
+    <string name="select_qr_first">Please select a QR image first</string>
+    <string name="permission_required">Permission required to access images.</string>
+    <string name="duplicate_qr_error">A document with the same QR already exists.</string>
+    <string name="id_number_constraint_error">A document with the same ID number already exists.</string>
+    <string name="license_number_constraint_error">A document with the same license number already exists.</string>
+    <string name="email_already_in_use">This email is already in use</string>
+    <string name="phone_already_in_use">This phone number is already in use</string>
+    <string name="user_not_found_error">User not found</string>
+    <string name="document_added_success">Document added!</string>
+    <string name="document_added_failure">Failed to add document</string>
+    <string name="expiry_updated_success">Expiry date updated.</string>
+    <string name="document_not_found">Document not found.</string>
+    <string name="expiry_before_issue_error">The new expiry must be after the issue date.</string>
+    <string name="expiry_not_later_error">Please select a date later than the current expiry.</string>
+    <string name="update_failed">Update failed.</string>
+    <string name="email_or_phone_hint">Email or Phone</string>
+    <string name="change_pin_title">Change PIN</string>
+    <string name="user_found">User verified</string>
+    <string name="pin_changed_success">PIN changed successfully</string>
+    <string name="pin_rules_error">PIN must be 4–8 digits</string>
+    <string name="pin_same_error">New PIN must be different from the old PIN</string>
+    <string name="generic_error">Something went wrong</string>
+    <string name="verify_user">Verify user</string>
+    <string name="old_pin">Old PIN</string>
+    <string name="new_pin">New PIN</string>
+    <string name="delete_account">Delete Account</string>
+    <string name="confirm_deletion_title">Confirm Deletion</string>
+    <string name="confirm_deletion_message">Are you sure you want to delete your profile?</string>
+    <string name="yes">Yes</string>
+    <string name="profile_deleted_success">Your profile has been deleted successfully.</string>
+    <string name="mock_sms_channel_name">Mock SMS</string>
+    <string name="mock_sms_channel_desc">Dev-only phone verification</string>
+    <string name="verify_phone">Verify phone</string>
+    <string name="enter_code_sent_to">A code was sent to %1$s. Please enter the 6-digit code.</string>
+    <string name="phone_verified">Phone verified!</string>
+    <string name="invalid_code">Invalid code</string>
+    <string name="try_again_or_resend">Would you like to try again or resend a new code?</string>
+    <string name="try_again">Try again</string>
+    <string name="resend">Resend</string>
+    <string name="verify">Verify</string>
+    <string name="code_resent">A new code was sent.</string>
+    <string name="your_verification_code_is">Your verification code is %1$s</string>
+    <string name="paste_verification_link_from_inbox">Paste the verification link from your inbox</string>
+    <string name="paste_verification_link">Paste verification link</string>
+    <string name="tap_verify_first">Please tap Verify first to receive the email link.</string>
+
+
+    <string-array name="eu_countries">
+        <item>Austria</item>
+        <item>Belgium</item>
+        <item>Bulgaria</item>
+        <item>Croatia</item>
+        <item>Cyprus</item>
+        <item>Czech Republic</item>
+        <item>Denmark</item>
+        <item>Estonia</item>
+        <item>Finland</item>
+        <item>France</item>
+        <item>Germany</item>
+        <item>Greece</item>
+        <item>Hungary</item>
+        <item>Ireland</item>
+        <item>Italy</item>
+        <item>Latvia</item>
+        <item>Lithuania</item>
+        <item>Luxembourg</item>
+        <item>Malta</item>
+        <item>Netherlands</item>
+        <item>Poland</item>
+        <item>Portugal</item>
+        <item>Romania</item>
+        <item>Slovakia</item>
+        <item>Slovenia</item>
+        <item>Spain</item>
+        <item>Sweden</item>
+    </string-array>
+</resources>

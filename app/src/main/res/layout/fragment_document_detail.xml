@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:id="@+id/typeText"
+            android:text="@string/type"
+            android:textSize="18sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/issuerText"
+            android:text="@string/issuer"
+            android:textSize="18sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/issueDateText"
+            android:text="@string/issue_date"
+            android:textSize="18sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/expiryDateText"
+            android:text="@string/expiry_date"
+            android:textSize="18sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/statusText"
+            android:text="@string/status"
+            android:textSize="18sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+        <!-- ===== New: per-type detail groups ===== -->
+
+        <!-- ID card -->
+        <LinearLayout
+            android:id="@+id/idDetailGroup"
+            android:visibility="gone"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="12dp">
+
+            <ImageView
+                android:id="@+id/idOwnerPhoto"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_person_placeholder"
+                android:contentDescription="@string/id_photo_desc"
+                android:layout_marginTop="8dp"/>
+            <TextView
+                android:id="@+id/idFullNameText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/full_name"/>
+
+            <TextView
+                android:id="@+id/idDobText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/date_of_birth"/>
+
+
+            <TextView
+                android:id="@+id/idNationalityText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/nationality"/>
+
+            <TextView
+                android:id="@+id/idNumberText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/id_number"/>
+        </LinearLayout>
+
+        <!-- Driver license -->
+        <LinearLayout
+            android:id="@+id/driverDetailGroup"
+            android:visibility="gone"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="12dp">
+
+            <ImageView
+                android:id="@+id/dlOwnerPhoto"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_person_placeholder"
+                android:contentDescription="@string/dl_photo_desc"
+                android:layout_marginTop="8dp"/>
+
+            <TextView
+                android:id="@+id/dlFullNameText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/full_name"/>
+
+            <TextView
+                android:id="@+id/dlDobText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/date_of_birth" />
+
+            <TextView
+                android:id="@+id/dlNumberText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/license_number"/>
+
+            <TextView
+                android:id="@+id/dlCategoriesText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/categories"/>
+        </LinearLayout>
+
+        <!-- Ticket -->
+        <LinearLayout
+            android:id="@+id/ticketDetailGroup"
+            android:visibility="gone"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="12dp">
+
+            <TextView
+                android:id="@+id/tkEventText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/event"/>
+
+            <TextView
+                android:id="@+id/tkEventDateText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/event_date" />
+
+            <TextView
+                android:id="@+id/tkSeatText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/seat"/>
+
+            <TextView
+                android:id="@+id/tkVenueText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/venue"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/showQrButton"
+            android:text="@string/show_qr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:cornerRadius="8dp"/>
+
+        <Button
+            android:id="@+id/editButton"
+            android:text="@string/edit"
+            app:cornerRadius="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp" />
+
+        <Button
+            android:id="@+id/deleteButton"
+            android:text="@string/delete"
+            app:cornerRadius="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="@android:color/holo_red_dark" />
+
+    </LinearLayout>
+</ScrollView>
+

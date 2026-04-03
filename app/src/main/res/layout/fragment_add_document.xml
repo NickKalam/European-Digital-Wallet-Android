@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="24dp">
+
+        <Spinner
+            android:id="@+id/typeSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/issuerInput"
+            android:hint="@string/issuer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/issueDateInput"
+            android:hint="@string/issue_date"
+            android:inputType="date"
+            android:focusable="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/expiryDateInput"
+            android:hint="@string/expiry_date"
+            android:inputType="date"
+            android:focusable="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/pickQrButton"
+            android:text="@string/pick_qr_image_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp" />
+
+        <TextView
+            android:id="@+id/qrStatusText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/no_qr_selected"
+            android:layout_marginTop="6dp" />
+
+
+
+        <!-- ID CARD -->
+        <LinearLayout
+            android:id="@+id/idGroup"
+            android:visibility="gone"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <ImageView
+                android:id="@+id/idOwnerPhotoPreview"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_person_placeholder"
+                android:contentDescription="@string/id_photo_desc"
+                android:layout_marginTop="8dp"/>
+
+            <Button
+                android:id="@+id/idOwnerPhotoButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/take_photo"
+                android:layout_marginTop="8dp" />
+
+
+            <EditText
+                android:id="@+id/idFullNameInput"
+                android:inputType="textPersonName"
+                android:hint="@string/full_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/idDobInput"
+                android:inputType="date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/date_of_birth"
+                android:focusable="false" />
+
+            <TextView
+                android:id="@+id/nationalityLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/nationality"
+                android:layout_marginBottom="0dp"/>
+
+            <Spinner
+                android:id="@+id/idNationalityInput"
+                android:label="@string/nationality"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:spinnerMode="dropdown"/>
+
+
+
+            <EditText
+                android:id="@+id/idNumberInput"
+                android:inputType="text"
+                android:hint="@string/id_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <!-- DRIVER LICENSE -->
+        <LinearLayout
+            android:id="@+id/driverGroup"
+            android:visibility="gone"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <ImageView
+                android:id="@+id/dlOwnerPhotoPreview"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_person_placeholder"
+                android:contentDescription="@string/dl_photo_desc"
+                android:layout_marginTop="8dp"/>
+
+            <Button
+                android:id="@+id/dlOwnerPhotoButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/take_photo"
+                android:layout_marginTop="8dp" />
+
+            <EditText
+                android:id="@+id/dlFullNameInput"
+                android:inputType="textPersonName"
+                android:hint="@string/full_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/dlDobInput"
+                android:inputType="date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/date_of_birth"
+                android:focusable="false" />
+
+            <EditText
+                android:id="@+id/dlNumberInput"
+                android:inputType="number"
+                android:hint="@string/license_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/dlCategoriesInput"
+                android:inputType="text"
+                android:hint="@string/categories"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <!-- TICKET -->
+        <LinearLayout
+            android:id="@+id/ticketGroup"
+            android:visibility="gone"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/tkEventInput"
+                android:inputType="text"
+                android:hint="@string/event"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/tkEventDateInput"
+                android:inputType="date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/event_date"
+                android:focusable="false" />
+
+            <EditText
+                android:id="@+id/tkSeatInput"
+                android:inputType="text"
+                android:hint="@string/seat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/tkVenueInput"
+                android:inputType="text"
+                android:hint="@string/venue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/addButton"
+            android:text="@string/add_document"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp" />
+
+    </LinearLayout>
+</ScrollView>
+

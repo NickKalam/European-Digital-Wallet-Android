@@ -1,0 +1,152 @@
+<resources>
+    <string name="app_name">Portefeuille Numérique</string>
+    <string name="login">Se connecter</string>
+    <string name="register">S\'inscrire</string>
+    <string name="logout">Se déconnecter</string>
+    <string name="continue_button">Continuer</string>
+    <string name="mock_verification_channel_name">Vérification</string>
+    <string name="mock_verification_channel_desc">Codes de vérification SMS/Email simulés</string>
+    <string name="sms_verification_title">Vérification par SMS</string>
+    <string name="your_code_is">Votre code de vérification est %1$s</string>
+    <string name="verify_code">Vérifier le code</string>
+    <string name="enter_code">Saisir le code</string>
+    <string name="code_sent">Code de vérification envoyé</string>
+    <string name="email_not_verified">E-mail non encore vérifié.</string>
+    <string name="verification_email_sent">E-mail de vérification envoyé. Vérifiez votre boîte de réception.</string>
+    <string name="firebase_signin_failed">Échec de la connexion à Firebase pour la vérification de l’e-mail.</string>
+    <string name="firebase_wrong_password">Le compte existe, mais le mot de passe temporaire ne correspond pas.</string>
+    <string name="firebase_account_missing">Cet e-mail n’est pas lié à Firebase. Veuillez vous réinscrire pour activer la vérification par e-mail.</string>
+    <string name="name">Nom</string>
+    <string name="phone">Téléphone (optionnel)</string>
+    <string name="back_to_login">Retour à la connexion</string>
+    <string name="add_document">Ajouter un document</string>
+    <string name="documents">Documents</string>
+    <string name="show_qr">Afficher le QR</string>
+    <string name="edit">Modifier</string>
+    <string name="delete">Supprimer</string>
+    <string name="id_photo_desc">Photo d’identité du propriétaire</string>
+    <string name="dl_photo_desc">Photo du propriétaire du permis de conduire</string>
+    <string name="take_photo">Prendre une photo</string>
+    <string name="photo_capture_failed">Échec de la prise de photo</string>
+    <string name="select_owner_photo_source">Sélectionner la source de la photo du propriétaire</string>
+    <string name="from_files">Depuis les fichiers</string>
+    <string name="use_camera">Utiliser l’appareil photo</string>
+    <string name="invalid_email_or_phone">Adresse e-mail ou numéro de téléphone invalide</string>
+    <string name="invalid_email">Adresse e-mail invalide</string>
+    <string name="invalid_phone">Numéro de téléphone invalide</string>
+    <string name="registration_success">Inscription réussie ! Veuillez vous connecter.</string>
+    <string name="qr_render_error">Impossible d’afficher l’image QR.</string>
+    <string name="issuer">Émetteur : %1$s</string>
+    <string name="type">Type : %1$s</string>
+    <string name="status">Statut : %1$s</string>
+    <string name="issue_date">Date d\'émission : %1$s</string>
+    <string name="expiry_date">Date d\'expiration : %1$s</string>
+    <string name="date_of_birth">Date de naissance : %1$s</string>
+    <string name="event_date">Date de l’événement : %1$s</string>
+    <string name="full_name">Nom complet : %1$s</string>
+    <string name="nationality">Nationalité : %1$s</string>
+    <string name="id_number">Numéro d\'identité : %1$s</string>
+    <string name="license_number">Numéro de permis : %1$s</string>
+    <string name="categories">Catégories : %1$s</string>
+    <string name="event">Événement : %1$s</string>
+    <string name="seat">Siège : %1$s</string>
+    <string name="venue">Lieu : %1$s</string>
+    <string name="pick_qr_image_button">Sélectionner une image QR</string>
+    <string name="date_error">La date d’émission doit être antérieure à la date d’expiration</string>
+    <string name="user_no_login_error">Utilisateur non connecté</string>
+    <string name="empty_fields_error">Tous les champs sont obligatoires</string>
+    <string name="pin_required">PIN requis</string>
+    <string name="invalid_pin_error">PIN invalide</string>
+    <string name="qr_loaded">QR chargé</string>
+    <string name="no_qr_found">Aucun QR trouvé</string>
+    <string name="no_qr_selected">Aucun QR sélectionné</string>
+    <string name="select_qr_source">Sélectionner la source du QR</string>
+    <string name="camera_permission_required">L\'autorisation de la caméra est requise pour capturer des codes QR.</string>
+
+    <string name="qr_image">Image QR</string>
+    <string name="decode_error">Erreur de décodage</string>
+    <string name="select_qr_first">Veuillez d’abord sélectionner une image QR</string>
+    <string name="permission_required">Autorisation requise pour accéder aux images.</string>
+    <string name="duplicate_qr_error">Un document avec le même QR existe déjà.</string>
+    <string name="id_number_constraint_error">Un document avec le même numéro d\'identité existe déjà.</string>
+    <string name="license_number_constraint_error">Un document avec le même numéro de permis existe déjà.</string>
+    <string name="user_not_found_error">Utilisateur non trouvé</string>
+    <string name="email_already_in_use">Cette adresse e-mail est déjà utilisée</string>
+    <string name="phone_already_in_use">Ce numéro de téléphone est déjà utilisé</string>
+    <string name="user_exists">L’utilisateur existe déjà</string>
+    <string name="document_added_success">Document ajouté !</string>
+    <string name="document_added_failure">Échec de l’ajout du document</string>
+    <string name="expiry_updated_success">Date d’expiration mise à jour.</string>
+    <string name="document_not_found">Document non trouvé.</string>
+    <string name="account_locked">Compte verrouillé. Réessayez plus tard.</string>
+    <string name="expiry_before_issue_error">La nouvelle date d’expiration doit être postérieure à la date d’émission.</string>
+    <string name="expiry_not_later_error">Veuillez sélectionner une date postérieure à la date d’expiration actuelle.</string>
+    <string name="update_failed">Échec de la mise à jour.</string>
+    <string name="email_or_phone_hint">Email ou Téléphone</string>
+    <string name="change_pin_title">Changer le PIN</string>
+    <string name="user_found">Utilisateur vérifié</string>
+    <string name="pin_changed_success">PIN modifié avec succès</string>
+    <string name="pin_rules_error">Le PIN doit comporter 4 à 8 chiffres</string>
+    <string name="pin_same_error">Le nouveau PIN doit être différent de l\'ancien</string>
+    <string name="generic_error">Une erreur est survenue</string>
+    <string name="verify_user">Vérifier l’utilisateur</string>
+    <string name="old_pin">Ancien PIN</string>
+    <string name="new_pin">Nouveau PIN</string>
+    <string name="driver_age_error">Un conducteur doit avoir au moins 18 ans</string>
+    <string name="invalid_dob_error">Date de naissance invalide</string>
+    <string name="invalid_categories">Catégories non valides</string>
+    <string name="invalid_credentials">Identifiants invalides</string>
+    <string name="event_date_error">La date de l’événement doit être postérieure à aujourd’hui</string>
+    <string name="add">Ajouter</string>
+    <string name="cancel">Annuler</string>
+    <string name="delete_account">Supprimer le compte</string>
+    <string name="confirm_deletion_title">Confirmer la suppression</string>
+    <string name="confirm_deletion_message">Êtes-vous sûr de vouloir supprimer votre profil ?</string>
+    <string name="yes">Oui</string>
+    <string name="profile_deleted_success">Votre profil a été supprimé avec succès.</string>
+    <string name="mock_sms_channel_name">SMS simulé</string>
+    <string name="mock_sms_channel_desc">Vérification du téléphone réservée aux développeurs</string>
+    <string name="verify_phone">Vérifier le téléphone</string>
+    <string name="enter_code_sent_to">Un code a été envoyé à %1$s. Veuillez saisir le code à 6 chiffres.</string>
+    <string name="phone_verified">Téléphone vérifié !</string>
+    <string name="invalid_code">Code invalide</string>
+    <string name="try_again_or_resend">Voulez-vous réessayer ou renvoyer un nouveau code ?</string>
+    <string name="resend">Renvoyer</string>
+    <string name="verify">Vérifier</string>
+    <string name="code_resent">Un nouveau code a été envoyé.</string>
+    <string name="your_verification_code_is">Votre code de vérification est %1$s</string>
+    <string name="try_again">Réessayer</string>
+    <string name="paste_verification_link_from_inbox">Collez le lien de vérification depuis votre boîte de réception</string>
+    <string name="paste_verification_link">Coller le lien de vérification</string>
+    <string name="tap_verify_first">Appuyez d’abord sur « Vérifier » pour recevoir le lien par e-mail.</string>
+
+    <string-array name="eu_countries">
+        <item>Autriche</item>
+        <item>Belgique</item>
+        <item>Bulgarie</item>
+        <item>Croatie</item>
+        <item>Chypre</item>
+        <item>République tchèque</item>
+        <item>Danemark</item>
+        <item>Estonie</item>
+        <item>Finlande</item>
+        <item>France</item>
+        <item>Allemagne</item>
+        <item>Grèce</item>
+        <item>Hongrie</item>
+        <item>Irlande</item>
+        <item>Italie</item>
+        <item>Lettonie</item>
+        <item>Lituanie</item>
+        <item>Luxembourg</item>
+        <item>Malte</item>
+        <item>Pays-Bas</item>
+        <item>Pologne</item>
+        <item>Portugal</item>
+        <item>Roumanie</item>
+        <item>Slovaquie</item>
+        <item>Slovénie</item>
+        <item>Espagne</item>
+        <item>Suède</item>
+    </string-array>
+</resources>

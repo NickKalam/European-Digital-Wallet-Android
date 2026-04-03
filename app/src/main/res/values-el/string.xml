@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Ψηφιακό Πορτοφόλι</string>
+    <string name="login">Σύνδεση</string>
+    <string name="register">Εγγραφή</string>
+    <string name="logout">Αποσύνδεση</string>
+    <string name="continue_button">Συνέχεια</string>
+    <string name="mock_verification_channel_name">Επαλήθευση</string>
+    <string name="mock_verification_channel_desc">Εικονικοί κωδικοί επαλήθευσης SMS/Email</string>
+    <string name="sms_verification_title">Επαλήθευση μέσω SMS</string>
+    <string name="your_code_is">Ο κωδικός επαλήθευσής σας είναι %1$s</string>
+    <string name="verify_code">Επαλήθευση κωδικού</string>
+    <string name="enter_code">Εισαγάγετε τον κωδικό</string>
+    <string name="code_sent">Ο κωδικός επαλήθευσης στάλθηκε</string>
+    <string name="email_not_verified">Το email δεν έχει επαληθευτεί ακόμα.</string>
+    <string name="verification_email_sent">Το email επαλήθευσης στάλθηκε. Ελέγξτε τα εισερχόμενά σας.</string>
+    <string name="firebase_signin_failed">Αποτυχία σύνδεσης στο Firebase για επαλήθευση email.</string>
+    <string name="firebase_wrong_password">Ο λογαριασμός υπάρχει, αλλά ο κωδικός πρόσβασης δεν ταιριάζει.</string>
+    <string name="firebase_account_missing">Αυτό το email δεν είναι συνδεδεμένο με το Firebase. Επανεγγραφείτε για να ενεργοποιήσετε την επαλήθευση μέσω email.</string>
+    <string name="add_document">Προσθήκη εγγράφου </string>
+    <string name="id_photo_desc">Φωτογραφία ταυτότητας κατόχου</string>
+    <string name="dl_photo_desc">Φωτογραφία κατόχου άδειας οδήγησης</string>
+    <string name="take_photo">Λήψη φωτογραφίας</string>
+    <string name="photo_capture_failed">Η λήψη φωτογραφίας απέτυχε</string>
+    <string name="select_owner_photo_source">Επιλέξτε πηγή φωτογραφίας κατόχου</string>
+    <string name="from_files">Από αρχεία</string>
+    <string name="use_camera">Χρήση κάμερας</string>
+
+    <string name="name">Όνομα</string>
+    <string name="phone">Τηλέφωνο (προαιρετικό )</string>
+    <string name="back_to_login">Πίσω στη σύνδεση</string>
+    <string name="documents">Έγγραφα</string>
+    <string name="show_qr">Εμφάνιση QR</string>
+    <string name="edit">Επεξεργασία</string>
+    <string name="delete">Διαγραφή</string>
+    <string name="invalid_email_or_phone">Μη έγκυρη διεύθυνση email ή αριθμός τηλεφώνου</string>
+    <string name="invalid_email">Μη έγκυρη διεύθυνση email</string>
+    <string name="invalid_phone">Μη έγκυρος αριθμός τηλεφώνου</string>
+    <string name="invalid_credentials">Μη έγκυρα στοιχεία σύνδεσης</string>
+    <string name="account_locked">Ο λογαριασμός έχει κλειδωθεί. Δοκιμάστε ξανά αργότερα.</string>
+    <string name="invalid_categories">Μη έγκυρες κατηγορίες</string>
+    <string name="registration_success">Επιτυχής εγγραφή! Παρακαλώ συνδεθείτε.</string>
+    <string name="qr_render_error">Αδυναμία εμφάνισης της εικόνας QR.</string>
+    <string name="issuer">Εκδότης: %1$s</string>
+    <string name="type">Τύπος: %1$s</string>
+    <string name="status">Κατάσταση: %1$s</string>
+    <string name="issue_date">Ημερομηνία έκδοσης: %1$s</string>
+    <string name="expiry_date">Ημερομηνία λήξης: %1$s</string>
+    <string name="date_of_birth">Ημερομηνία γέννησης: %1$s</string>
+    <string name="event_date">Ημερομηνία εκδήλωσης: %1$s</string>
+    <string name="full_name">Ονοματεπώνυμο: %1$s</string>
+    <string name="nationality">Εθνικότητα: %1$s</string>
+    <string name="id_number">Αριθμός ταυτότητας: %1$s</string>
+    <string name="license_number">Αριθμός άδειας: %1$s</string>
+    <string name="categories">Κατηγορίες: %1$s</string>
+    <string name="event">Εκδήλωση: %1$s</string>
+    <string name="seat">Θέση: %1$s</string>
+    <string name="venue">Χώρος: %1$s</string>
+    <string name="pick_qr_image_button">Επιλέξτε εικόνα QR</string>
+    <string name="date_error">Η ημερομηνία έκδοσης πρέπει να είναι πριν από την ημερομηνία λήξης</string>
+    <string name="user_no_login_error">Ο χρήστης δεν έχει συνδεθεί</string>
+    <string name="empty_fields_error">Απαιτούνται όλα τα πεδία</string>
+    <string name="pin_required">Απαιτείται PIN</string>
+    <string name="invalid_pin_error">Μη έγκυρο PIN</string>
+    <string name="select_qr_source">Επιλέξτε πηγή QR</string>
+    <string name="camera_permission_required">Απαιτείται άδεια κάμερας για τη λήψη κωδικών QR.</string>
+    <string name="qr_loaded">Το QR φορτώθηκε</string>
+    <string name="no_qr_found">Δεν βρέθηκε QR</string>
+    <string name="no_qr_selected">Δεν έχει επιλεγεί QR</string>
+    <string name="qr_image">Εικόνα QR</string>
+    <string name="decode_error">Σφάλμα αποκωδικοποίησης</string>
+    <string name="select_qr_first">Παρακαλώ επιλέξτε πρώτα μια εικόνα QR</string>
+    <string name="permission_required">Χρειάζεται άδεια για πρόσβαση στις εικόνες.</string>
+    <string name="duplicate_qr_error">Ένα έγγραφο με το ίδιο QR υπάρχει ήδη.</string>
+    <string name="id_number_constraint_error">Ένα έγγραφο με τον ίδιο αριθμό ταυτότητας υπάρχει ήδη.</string>
+    <string name="license_number_constraint_error">Ένα έγγραφο με τον ίδιο αριθμό άδειας υπάρχει ήδη.</string>
+    <string name="email_already_in_use">Αυτό το email χρησιμοποιείται ήδη</string>
+    <string name="phone_already_in_use">Αυτός ο αριθμός τηλεφώνου χρησιμοποιείται ήδη</string>
+    <string name="user_not_found_error">Ο χρήστης δεν βρέθηκε</string>
+    <string name="user_exists">Ο χρήστης υπάρχει ήδη</string>
+    <string name="document_added_success">Το έγγραφο προστέθηκε!</string>
+    <string name="document_added_failure">Αποτυχία προσθήκης εγγράφου</string>
+    <string name="expiry_updated_success">Η ημερομηνία λήξης ενημερώθηκε.</string>
+    <string name="document_not_found">Το έγγραφο δεν βρέθηκε.</string>
+    <string name="expiry_before_issue_error">Η νέα λήξη πρέπει να είναι μετά την ημερομηνία έκδοσης.</string>
+    <string name="expiry_not_later_error">Επιλέξτε ημερομηνία μεταγενέστερη της τρέχουσας λήξης.</string>
+    <string name="update_failed">Αποτυχία ενημέρωσης.</string>
+    <string name="email_or_phone_hint">Email ή Τηλέφωνο</string>
+    <string name="change_pin_title">Αλλαγή PIN</string>
+    <string name="user_found">Ο χρήστης επαληθεύτηκε</string>
+    <string name="pin_changed_success">Το PIN άλλαξε με επιτυχία</string>
+    <string name="pin_rules_error">Το PIN πρέπει να έχει 4–8 ψηφία</string>
+    <string name="pin_same_error">Το νέο PIN πρέπει να είναι διαφορετικό από το παλιό</string>
+    <string name="generic_error">Κάτι πήγε στραβά</string>
+    <string name="verify_user">Επαλήθευση χρήστη</string>
+    <string name="old_pin">Παλιό PIN</string>
+    <string name="new_pin">Νέο PIN</string>
+    <string name="driver_age_error">Ο οδηγός πρέπει να είναι τουλάχιστον 18 ετών</string>
+    <string name="invalid_dob_error">Μη έγκυρη ημερομηνία γέννησης</string>
+    <string name="event_date_error">Η ημερομηνία εκδήλωσης πρέπει να είναι μεταγενέστερη της σημερινής</string>
+    <string name="add">Προσθήκη</string>
+    <string name="cancel">Ακύρωση</string>
+    <string name="delete_account">Διαγραφή Λογαριασμού</string>
+    <string name="confirm_deletion_title">Επιβεβαίωση Διαγραφής</string>
+    <string name="confirm_deletion_message">Είστε σίγουροι ότι θέλετε να διαγράψετε το προφίλ σας;</string>
+    <string name="yes">Ναι</string>
+    <string name="profile_deleted_success">Το προφίλ σας διαγράφηκε με επιτυχία.</string>
+    <string name="mock_sms_channel_name">Εικονικό SMS</string>
+    <string name="mock_sms_channel_desc">Επαλήθευση τηλεφώνου μόνο για προγραμματιστές</string>
+    <string name="verify_phone">Επαλήθευση τηλεφώνου</string>
+    <string name="enter_code_sent_to">Ένας κωδικός στάλθηκε στο %1$s. Εισάγετε τον 6ψήφιο κωδικό.</string>
+    <string name="phone_verified">Το τηλέφωνο επαληθεύτηκε!</string>
+    <string name="invalid_code">Μη έγκυρος κωδικός</string>
+    <string name="try_again_or_resend">Θέλετε να δοκιμάσετε ξανά ή να σταλεί νέος κωδικός;</string>
+    <string name="resend">Επαναποστολή</string>
+    <string name="try_again">Δοκιμάσε ξανά</string>
+    <string name="verify">Επαλήθευση</string>
+    <string name="code_resent">Νέος κωδικός στάλθηκε.</string>
+    <string name="your_verification_code_is">Ο κωδικός επαλήθευσής σας είναι %1$s</string>
+    <string name="paste_verification_link_from_inbox">Επικολλήστε τον σύνδεσμο επαλήθευσης από τα εισερχόμενά σας</string>
+    <string name="paste_verification_link">Επικόλληση συνδέσμου επαλήθευσης</string>
+    <string name="tap_verify_first">Πατήστε πρώτα «Επαλήθευση» για να λάβετε το σύνδεσμο μέσω email.</string>
+
+    <string-array name="eu_countries">
+        <item>Αυστρία</item>
+        <item>Βέλγιο</item>
+        <item>Βουλγαρία</item>
+        <item>Κροατία</item>
+        <item>Κύπρος</item>
+        <item>Τσεχία</item>
+        <item>Δανία</item>
+        <item>Εσθονία</item>
+        <item>Φινλανδία</item>
+        <item>Γαλλία</item>
+        <item>Γερμανία</item>
+        <item>Ελλάδα</item>
+        <item>Ουγγαρία</item>
+        <item>Ιρλανδία</item>
+        <item>Ιταλία</item>
+        <item>Λετονία</item>
+        <item>Λιθουανία</item>
+        <item>Λουξεμβούργο</item>
+        <item>Μάλτα</item>
+        <item>Κάτω Χώρες</item>
+        <item>Πολωνία</item>
+        <item>Πορτογαλία</item>
+        <item>Ρουμανία</item>
+        <item>Σλοβακία</item>
+        <item>Σλοβενία</item>
+        <item>Ισπανία</item>
+        <item>Σουηδία</item>
+    </string-array>
+</resources>
