@@ -12,6 +12,7 @@ import com.digitalwallet.model.Document
 import com.digitalwallet.model.DriverLicenseDetails
 import com.digitalwallet.model.IdCardDetails
 import com.digitalwallet.model.TicketDetails
+import com.digitalwallet.model.Event
 import com.digitalwallet.model.User
 
 @Database(
@@ -21,9 +22,10 @@ import com.digitalwallet.model.User
         AuthLog::class,
         IdCardDetails::class,
         DriverLicenseDetails::class,
-        TicketDetails::class
+        TicketDetails::class,
+        Event::class
     ],
-    version = 5
+    version = 6
 )
 @TypeConverters(Converters::class)
 abstract class AppDatabase : RoomDatabase() {

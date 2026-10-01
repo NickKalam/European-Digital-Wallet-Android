@@ -9,8 +9,11 @@ import com.digitalwallet.model.DocumentFull
 import com.digitalwallet.model.DocumentStatus
 import com.digitalwallet.model.DocumentType
 import com.digitalwallet.model.DriverLicenseDetails
+import com.digitalwallet.model.Event
 import com.digitalwallet.model.IdCardDetails
 import com.digitalwallet.model.TicketDetails
+import com.digitalwallet.model.TicketDetailsUi
+import com.digitalwallet.model.TicketWithEvent
 
 class DocumentRepository(private val db: AppDatabase) {
 
@@ -64,7 +67,8 @@ class DocumentRepository(private val db: AppDatabase) {
         pin: String,
         id: IdCardDetails? = null,
         driver: DriverLicenseDetails? = null,
-        ticket: TicketDetails? = null
+        ticketEvent: Event? = null,
+        ticketSeat: String? = null
     ): Result<Long> {
         val user =
             db.userDao().getById(userId) ?: return Result.failure(Exception("USER_NOT_FOUND"))
@@ -101,8 +105,18 @@ class DocumentRepository(private val db: AppDatabase) {
                         }
 
                         DocumentType.TICKET -> {
-                            ticket?.let {
-                                db.documentDao().upsertTicket(it.copy(documentId = newId.toInt()))
+                            if (ticketEvent != null) {
+                                // Find or Create Event
+                                val existingEvent = db.documentDao().getEventByDetails(
+                                    ticketEvent.eventName, ticketEvent.eventDate, ticketEvent.venue
+                                )
+                                val eventId = existingEvent?.eventId ?: db.documentDao().insertEvent(ticketEvent).toInt()
+
+                                // Save Ticket
+                                val ticket = TicketDetails(documentId = newId.toInt(), eventId = eventId, seat = ticketSeat)
+                                db.documentDao().upsertTicket(ticket)
+                            } else {
+
                             }
                         }
                     }
@@ -137,7 +151,10 @@ class DocumentRepository(private val db: AppDatabase) {
         if (!ok) return Result.failure(Exception("INVALID_PIN"))
         val doc = db.documentDao().getDocument(documentId, userId)
         return if (doc != null) {
-            db.documentDao().delete(doc)
+            db.withTransaction {
+                db.documentDao().delete(doc)
+                db.documentDao().deleteOrphanedEvents()
+            }
             Result.success(true)
         } else Result.failure(Exception("DOC_NOT_FOUND"))
     }
@@ -156,8 +173,18 @@ class DocumentRepository(private val db: AppDatabase) {
             DocumentType.DRIVER_LICENSE ->
                 DocumentFull(base, driver = db.documentDao().getDriverDetails(docId))
 
-            DocumentType.TICKET ->
-                DocumentFull(base, ticket = db.documentDao().getTicketDetails(docId))
+            DocumentType.TICKET ->{
+                val joinedData = db.documentDao().getTicketWithEvent(docId)
+                val uiModel = joinedData?.let {
+                    TicketDetailsUi(
+                        eventName = it.event.eventName,
+                        eventDate = it.event.eventDate,
+                        venue = it.event.venue,
+                        seat = it.ticket.seat
+                    )
+                }
+                DocumentFull(base, ticket = uiModel)
+            }
         }
 
     }

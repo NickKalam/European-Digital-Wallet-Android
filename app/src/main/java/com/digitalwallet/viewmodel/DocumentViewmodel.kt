@@ -10,8 +10,8 @@ import com.digitalwallet.model.Document
 import com.digitalwallet.model.DocumentType
 import com.digitalwallet.model.DocumentFull
 import com.digitalwallet.model.DriverLicenseDetails
+import com.digitalwallet.model.Event
 import com.digitalwallet.model.IdCardDetails
-import com.digitalwallet.model.TicketDetails
 import com.digitalwallet.repository.DocumentRepository
 import com.google.zxing.BinaryBitmap
 import com.google.zxing.MultiFormatReader
@@ -67,19 +67,69 @@ class DocumentViewModel(private val repo: DocumentRepository) : ViewModel() {
     fun addDocumentWithDetails(
         base: Document,
         pin: String,
-        id: IdCardDetails? = null,
-        driver: DriverLicenseDetails? = null,
-        ticket: TicketDetails? = null
+
+        // ID Card raw inputs
+        idFullName: String? = null,
+        idNationality: String? = null,
+        idNumber: String? = null,
+        idDob: String? = null,
+        idPhotoUri: String? = null,
+
+        // Driver License raw inputs
+        dlFullName: String? = null,
+        dlNumber: String? = null,
+        dlCategories: String? = null,
+        dlDob: String? = null,
+        dlPhotoUri: String? = null,
+
+        // Ticket raw inputs
+        eventName: String? = null,
+        eventDate: String? = null,
+        eventVenue: String? = null,
+        ticketSeat: String? = null
     ) {
         viewModelScope.launch {
+
+            // Build the ID Card entity
+            val idDetails = if (idNumber != null) {
+                IdCardDetails(
+                    documentId = 0, // Gets overwritten in the repo
+                    fullName = idFullName,
+                    nationality = idNationality,
+                    idNumber = idNumber,
+                    dateOfBirth = idDob,
+                    ownerPhotoUri = idPhotoUri
+                )
+            } else null
+
+            // Build the Driver License entity
+            val driverDetails = if (dlNumber != null) {
+                DriverLicenseDetails(
+                    documentId = 0, // Gets overwritten in the repo
+                    fullName = dlFullName,
+                    licenseNumber = dlNumber,
+                    categories = dlCategories,
+                    dateOfBirth = dlDob,
+                    ownerPhotoUri = dlPhotoUri
+                )
+            } else null
+
+            // Build the Event entity
+            val ticketEvent = if (eventName != null || eventDate != null || eventVenue != null) {
+                Event(eventName = eventName, eventDate = eventDate, venue = eventVenue)
+            } else null
+
+            // Pass the constructed entities down to the repository
             val res = repo.addDocument(
                 base = base,
                 userId = base.userId,
                 pin = pin,
-                id = id,
-                driver = driver,
-                ticket = ticket
+                id = idDetails,
+                driver = driverDetails,
+                ticketEvent = ticketEvent,
+                ticketSeat = ticketSeat
             )
+
             if (res.isSuccess) {
                 loadUserDocuments(base.userId) // refresh list
             }

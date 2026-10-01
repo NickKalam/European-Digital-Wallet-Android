@@ -32,9 +32,6 @@ import com.digitalwallet.databinding.FragmentAddDocumentBinding
 import com.digitalwallet.model.Document
 import com.digitalwallet.model.DocumentStatus
 import com.digitalwallet.model.DocumentType
-import com.digitalwallet.model.DriverLicenseDetails
-import com.digitalwallet.model.IdCardDetails
-import com.digitalwallet.model.TicketDetails
 import com.digitalwallet.repository.DocumentRepository
 import com.digitalwallet.util.DatabaseProvider
 import com.digitalwallet.util.SessionManager
@@ -311,36 +308,36 @@ class AddDocumentFragment : Fragment() {
 
                     when (type) {
                         DocumentType.ID_CARD -> {
-                            val det = IdCardDetails(
-                                documentId = 0,
-                                fullName = binding.idFullNameInput.text?.toString(),
-                                nationality = binding.idNationalityInput.selectedItem?.toString(),
+                            viewModel.addDocumentWithDetails(
+                                base = base,
+                                pin = pin,
+                                idFullName = binding.idFullNameInput.text?.toString(),
+                                idNationality = binding.idNationalityInput.selectedItem?.toString(),
                                 idNumber = binding.idNumberInput.text?.toString(),
-                                dateOfBirth = binding.idDobInput.text?.toString(),
-                                ownerPhotoUri = viewModel.idOwnerPhotoUri
+                                idDob = binding.idDobInput.text?.toString(),
+                                idPhotoUri = viewModel.idOwnerPhotoUri
                             )
-                            viewModel.addDocumentWithDetails(base, pin, id = det)
                         }
                         DocumentType.DRIVER_LICENSE -> {
-                            val det = DriverLicenseDetails(
-                                documentId = 0,
-                                fullName = binding.dlFullNameInput.text?.toString(),
-                                licenseNumber = binding.dlNumberInput.text?.toString(),
-                                categories = binding.dlCategoriesInput.text?.toString()?.uppercase(),
-                                dateOfBirth = binding.dlDobInput.text?.toString(),
-                                ownerPhotoUri = viewModel.dlOwnerPhotoUri
+                            viewModel.addDocumentWithDetails(
+                                base = base,
+                                pin = pin,
+                                dlFullName = binding.dlFullNameInput.text?.toString(),
+                                dlNumber = binding.dlNumberInput.text?.toString(),
+                                dlCategories = binding.dlCategoriesInput.text?.toString()?.uppercase(),
+                                dlDob = binding.dlDobInput.text?.toString(),
+                                dlPhotoUri = viewModel.dlOwnerPhotoUri
                             )
-                            viewModel.addDocumentWithDetails(base, pin, driver = det)
                         }
                         DocumentType.TICKET -> {
-                            val det = TicketDetails(
-                                documentId = 0,
+                            viewModel.addDocumentWithDetails(
+                                base = base,
+                                pin = pin,
                                 eventName = binding.tkEventInput.text?.toString(),
-                                seat = binding.tkSeatInput.text?.toString(),
-                                venue = binding.tkVenueInput.text?.toString(),
-                                eventDate = binding.tkEventDateInput.text?.toString()
+                                eventDate = binding.tkEventDateInput.text?.toString(),
+                                eventVenue = binding.tkVenueInput.text?.toString(),
+                                ticketSeat = binding.tkSeatInput.text?.toString()
                             )
-                            viewModel.addDocumentWithDetails(base, pin, ticket = det)
                         }
                     }
                 }
